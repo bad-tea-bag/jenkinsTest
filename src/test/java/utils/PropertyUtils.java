@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertyUtils {
-    public static final String PATH_TO_PROPERTIES = "src/main/resources/configs.properties";
+    public static final String PATH_TO_PROPERTIES = "src/test/resources/configs.properties";
     private static final Logger LOG = LogManager.getLogger(PropertyUtils.class);
     private static final Properties prop = getProperty();
 
