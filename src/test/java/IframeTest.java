@@ -1,5 +1,6 @@
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.ScreenShotUtils;
 import utils.Utils;
 
 import static utils.Utils.switchToDefaultContent;
@@ -18,6 +19,7 @@ public class IframeTest extends BaseTest {
         String randomString = Utils.getRandomString(Constants.RANDOM_LENGTH);
         step.insertToTextybox(randomString);
         SOFT_ASSERT.assertEquals(step.getInsertedText(), randomString, "Text in the input field equals the random generated text");
+        ScreenShotUtils.makeScreenshot();
 
         logStep("Highlighting the entered text and pressing the 'B' button");
         switchToDefaultContent();
